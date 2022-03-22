@@ -1,13 +1,15 @@
 "use strict";
 
 // VARIABLES
+
+/*
 let catList = "";
 let content = "";
 let contentLi_001 = "";
 let contentLi_002 = "";
 let contentLi_003 = "";
 
-document.querySelector(".js-new-form").classList.remove("collapsed");
+
 
 catList = document.querySelector(".js-list");
 
@@ -55,11 +57,17 @@ contentLi_003=`<li class="card card_003">
 </p>
 </li>`
 
+
 content = contentLi_001 + contentLi_002 + contentLi_003;
 catList.innerHTML = content;
 
+*/
+
+
 
 // exercise 2.2. Trabajar con variables e interpolarlas y Bonus: Convertir cadenas de carácteres.
+
+document.querySelector(".js-new-form").classList.remove("collapsed");
 
 //kittenone
 
@@ -68,7 +76,7 @@ const kittenNameOne = "anastacio";
 //mayúsculas
 const nameCapitalizedOne = kittenNameOne.charAt(0).toUpperCase() + kittenNameOne.slice(1);
 const kittenDescOne =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
+  "Ruiseño,cariñoso y juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
 const kittenRaceOne = "British Shorthair";
 
 //kittentwo
@@ -89,16 +97,14 @@ const kittenNameThree = "cielo";
 //mayúsculas
 const nameCapitalizedThree = kittenNameThree.charAt(0).toUpperCase() + kittenNameThree.slice(1);
 const kittenDescThree =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
+  "Ruiseño, juguetón,cariñoso le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
 const kittenRaceThree = "British Shorthair";
 
 
 
-const list = document.querySelector (".list");
+const list = document.querySelector (".js-list");
 
-
-
-list.innerHTML= `<li class="card">
+const kittenOne = `<li class="card">
 <article>
   <img
     class="card_img"
@@ -111,8 +117,9 @@ list.innerHTML= `<li class="card">
     ${kittenDescOne}
   </p>
 </article>
-</li>
-<li class="card">
+</li>`;
+
+const kittenTwo = `<li class="card">
 <img
   class="card_img"
   src=${kittenImageTwo}
@@ -124,8 +131,10 @@ list.innerHTML= `<li class="card">
 ${kittenDescTwo}
 </p>
 </li>
-<li class="card">
- <img
+`;
+
+const kittenThree = `<li class="card">
+<img
 class="card_img"
 src=${kittenImageThree}
 alt="gatito"/>
@@ -136,4 +145,31 @@ ${kittenDescThree}
 </p>
 </li>
 `;
+
+
+
+
+//list.innerHTML= kittenOne + kittenTwo + kittenThree;
+
+
+
+
+// Adakitten day 3
+
+const input_search_desc = document.querySelector('.js_in_search_desc');
+
+input_search_desc.value = "cariñoso";
+
+const descrSearchText = input_search_desc.value;
+
+
+if (kittenDescOne.includes(descrSearchText)){
+  list.innerHTML += kittenOne}
+if (kittenDescTwo.includes (descrSearchText)){
+  list.innerHTML +=kittenTwo}
+
+if (kittenDescThree.includes (descrSearchText)){
+    list.innerHTML +=kittenThree}
+
+
 
