@@ -1,13 +1,11 @@
 "use strict";
-
+/*
 // VARIABLES
 let catList = "";
 let content = "";
 let contentLi_001 = "";
 let contentLi_002 = "";
 let contentLi_003 = "";
-
-document.querySelector(".js-new-form").classList.remove("collapsed");
 
 catList = document.querySelector(".js-list");
 
@@ -57,7 +55,9 @@ contentLi_003=`<li class="card card_003">
 
 content = contentLi_001 + contentLi_002 + contentLi_003;
 catList.innerHTML = content;
+*/
 
+document.querySelector(".js-new-form").classList.remove("collapsed");
 
 // exercise 2.2. Trabajar con variables e interpolarlas y Bonus: Convertir cadenas de carácteres.
 
@@ -112,6 +112,7 @@ list.innerHTML= `<li class="card">
   </p>
 </article>
 </li>
+
 <li class="card">
 <img
   class="card_img"
@@ -124,6 +125,7 @@ list.innerHTML= `<li class="card">
 ${kittenDescTwo}
 </p>
 </li>
+
 <li class="card">
  <img
 class="card_img"
