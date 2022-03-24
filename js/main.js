@@ -1,6 +1,9 @@
 "use strict";
 /*
-// VARIABLES
+VARIABLES
+*/
+
+/*
 let catList = "";
 let content = "";
 let contentLi_001 = "";
@@ -53,6 +56,7 @@ contentLi_003=`<li class="card card_003">
 </p>
 </li>`
 
+
 content = contentLi_001 + contentLi_002 + contentLi_003;
 catList.innerHTML = content;
 */
@@ -61,44 +65,46 @@ document.querySelector(".js-new-form").classList.remove("collapsed");
 
 // exercise 2.2. Trabajar con variables e interpolarlas y Bonus: Convertir cadenas de carácteres.
 
+document.querySelector(".js-new-form").classList.remove("collapsed");
+
 //kittenone
 
 const kittenImageOne = "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg";
 const kittenNameOne = "anastacio";
 //mayúsculas
-const nameCapitalizedOne = kittenNameOne.charAt(0).toUpperCase() + kittenNameOne.slice(1);
+const nameCapitalizedOne =
+  kittenNameOne.charAt(0).toUpperCase() + kittenNameOne.slice(1);
 const kittenDescOne =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
+  "Ruiseño,cariñoso y juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
 const kittenRaceOne = "British Shorthair";
 
 //kittentwo
 
-const kittenImageTwo = "https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg";
+const kittenImageTwo =
+  "https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg";
 const kittenNameTwo = "fiona";
 //mayúsculas
-const nameCapitalizedTwo = kittenNameTwo.charAt(0).toUpperCase() + kittenNameTwo.slice(1);
+const nameCapitalizedTwo =
+  kittenNameTwo.charAt(0).toUpperCase() + kittenNameTwo.slice(1);
 const kittenDescTwo =
-
   "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
 const kittenRaceTwo = "British Shorthair";
 
 //kittenthree
 
-const kittenImageThree = "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg";
+const kittenImageThree =
+  "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a.jpg";
 const kittenNameThree = "cielo";
 //mayúsculas
-const nameCapitalizedThree = kittenNameThree.charAt(0).toUpperCase() + kittenNameThree.slice(1);
+const nameCapitalizedThree =
+  kittenNameThree.charAt(0).toUpperCase() + kittenNameThree.slice(1);
 const kittenDescThree =
-  "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
+  "Ruiseño, juguetón,cariñoso le guta estar tranquilo y que nadie le moleste. Es una maravilla acariciarle!";
 const kittenRaceThree = "British Shorthair";
 
+const list = document.querySelector(".js-list");
 
-
-const list = document.querySelector (".list");
-
-
-
-list.innerHTML= `<li class="card">
+const kittenOne = `<li class="card">
 <article>
   <img
     class="card_img"
@@ -111,9 +117,9 @@ list.innerHTML= `<li class="card">
     ${kittenDescOne}
   </p>
 </article>
-</li>
+</li>`;
 
-<li class="card">
+const kittenTwo = `<li class="card">
 <img
   class="card_img"
   src=${kittenImageTwo}
@@ -125,9 +131,10 @@ list.innerHTML= `<li class="card">
 ${kittenDescTwo}
 </p>
 </li>
+`;
 
-<li class="card">
- <img
+const kittenThree = `<li class="card">
+<img
 class="card_img"
 src=${kittenImageThree}
 alt="gatito"/>
@@ -139,3 +146,23 @@ ${kittenDescThree}
 </li>
 `;
 
+//list.innerHTML= kittenOne + kittenTwo + kittenThree;
+
+// Adakitten day 3
+
+const input_search_desc = document.querySelector(".js_in_search_desc");
+
+input_search_desc.value = "cariñoso";
+
+const descrSearchText = input_search_desc.value;
+
+if (kittenDescOne.includes(descrSearchText)) {
+  list.innerHTML += kittenOne;
+}
+if (kittenDescTwo.includes(descrSearchText)) {
+  list.innerHTML += kittenTwo;
+}
+
+if (kittenDescThree.includes(descrSearchText)) {
+  list.innerHTML += kittenThree;
+}
